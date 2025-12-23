@@ -1,0 +1,90 @@
+.imgmax {
+  max-height: 400px;
+}
+
+.anchor {
+  scroll-margin-top: 80px;
+}
+
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.sgroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 50s infinite linear;
+  padding-right: 1em;
+}
+
+.scard {
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 0.5em;
+  font-size: 20px;
+  border-radius: 0.2em;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.checkbox {
+  opacity: 0%;
+  position: absolute;
+  display: none !important;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: white;
+}
+.fa-sun {
+  color: rgb(255, 255, 255);
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.05s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translate(24px);
+}
+
+#checkbox {
+  display: none;
+}
